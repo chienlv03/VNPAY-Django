@@ -25,7 +25,7 @@ SECRET_KEY = '*bzwzl9d&aq)rg2z9(@twit_)=5fp77et3i&l4-xp1h$r)^+gp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://cong-dong-xanh.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://vnpay-django.onrender.com', '127.0.0.1']
 
 # Application definition
 
