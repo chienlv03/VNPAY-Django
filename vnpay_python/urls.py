@@ -13,20 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.urls import re_path
 from django.contrib import admin
 
 import vnpay_python.views
 
 urlpatterns = [
-    url(r'^$', vnpay_python.views.index, name='index'),
-    url(r'^index.html$', vnpay_python.views.index, name='index_html'),
-    url(r'^donate.html$', vnpay_python.views.donate, name='donate'),
-    url(r'^contact.html$', vnpay_python.views.contact, name='contact'),
-    url(r'^login.html$', vnpay_python.views.login, name='login'),
-    url(r'^payment_ipn$', vnpay_python.views.payment_ipn, name='payment_ipn'),
-    url(r'^payment_return$', vnpay_python.views.payment_return, name='payment_return'),
-    url(r'^query$', vnpay_python.views.query, name='query'),
-    url(r'^refund$', vnpay_python.views.refund, name='refund'),
-    url(r'^admin/', admin.site.urls),
+    re_path(r'^$', vnpay_python.views.index, name='index'),
+    re_path(r'^index.html$', vnpay_python.views.index, name='index_html'),
+    re_path(r'^donate.html$', vnpay_python.views.donate, name='donate'),
+    re_path(r'^contact.html$', vnpay_python.views.contact, name='contact'),
+    re_path(r'^login.html$', vnpay_python.views.login, name='login'),
+    re_path(r'^payment_ipn$', vnpay_python.views.payment_ipn, name='payment_ipn'),
+    re_path(r'^payment_return$', vnpay_python.views.payment_return, name='payment_return'),
+    re_path(r'^query$', vnpay_python.views.query, name='query'),
+    re_path(r'^refund$', vnpay_python.views.refund, name='refund'),
+    re_path(r'^admin/', admin.site.urls),
 ]

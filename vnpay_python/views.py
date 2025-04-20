@@ -1,16 +1,13 @@
 import hashlib
 import hmac
 import json
-import urllib
-import urllib.parse
-import urllib.request
 import random
-import requests
 from datetime import datetime
+
+import requests
 from django.conf import settings
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
-from django.utils.http import urlquote
 
 from vnpay_python.forms import PaymentForm
 from vnpay_python.vnpay import vnpay
